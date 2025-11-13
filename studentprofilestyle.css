@@ -1,0 +1,108 @@
+/* General Body and Font Setup */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef1f5; /* Light background */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background-color: #2f96f7; /* AIUB Red/Crimson */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    /* Use margin to separate each section (from body/top) */
+    margin-bottom: 2.5em; /* 6. Use CSS units (em) */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 1.8em; /* 6. Use CSS units (em) */
+    margin: 0 0 5px 0;
+}
+
+header p {
+    font-size: 0.9em;
+    margin: 0;
+    font-weight: 300;
+}
+
+/* 4. Center-align the section using margin: auto and a fixed width */
+.profile-box {
+    /* 4. Fixed width */
+    width: 90%; 
+    max-width: 650px; 
+    
+    /* 4. Center-align the section */
+    margin: 0 auto;
+    
+    /* 8. Add a light background color to the profile section */
+    background-color: #ffffff;
+    
+    /* 5. Apply the box model: Add padding inside the profile box (px) */
+    padding: 30px; 
+    
+    /* 5. Add a border around the section */
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    
+    /* 5. Use margin to separate each section (from header/top) */
+    margin-top: 2em;
+    margin-bottom: 40px; 
+    
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Profile Photo Styling */
+.profile-photo {
+    /* Fixed size for the photo */
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 20px auto;
+    
+    /* 7. Round the student image corners using border-radius */
+    border-radius: 50%;
+    border: 4px solid #35b5ff; /* Accent color border */
+}
+
+/* Name and Info Styling */
+.profile-box h2 {
+    font-size: 180%; /* 6. Use CSS units (%) */
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+
+.info-group p {
+    font-size: 15px;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Bio Section Styling */
+.bio-section {
+    text-align: left;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px dashed #eee;
+}
+
+.bio-section h3 {
+    font-size: 1.2em;
+    color: #1d4ed8; /* Blue accent */
+    margin-bottom: 10px;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #333;
+    color: #bbb;
+    font-size: 0.8em;
+}
