@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Hashemi Rafsanjani - Portfolio</title>
+    <meta name="description" content="Personal portfolio of Ali Hashemi Rafsanjani, a Computer Science student preparing for an internship.">
+    <meta name="keywords" content="Ali Hashemi Rafsanjani, Computer Science, Web Technologies, Portfolio, Internship, AIUB">
+    <meta name="author" content="Ali Hashemi Rafsanjani">
+
+    <style>
+        /* General Reset and Font */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+
+        /* Header Styling (Unchanged) */
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+
+        /* Navigation Bar (Unchanged) */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: background-color 0.3s;
+            border-radius: 4px;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Main Content and Sections (Unchanged) */
+        main {
+            padding: 20px 40px;
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+
+        section {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            /* Ensure content inside section clears floating elements */
+            overflow: auto; 
+        }
+
+        section h2 {
+            color: #007bff;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        /* --- NEW: Photo Space Styling --- */
+        #about {
+            display: flex; /* Use flexbox for layout */
+            gap: 20px;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        }
+        
+        #about-text {
+            flex: 2; /* Biography takes more space */
+            min-width: 300px;
+        }
+
+        .profile-photo-container {
+            flex: 1; /* Photo takes less space */
+            min-width: 150px;
+            max-width: 200px;
+            text-align: center;
+        }
+
+        .profile-photo-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px; /* Slightly rounded corners */
+            border: 3px solid #007bff; /* Primary color border */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Education Table Styling (Unchanged) */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        table caption {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f0f0;
+            color: #333;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Contact Form Styling (Unchanged) */
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #007bff;
+            padding: 0 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        /* Footer Styling (Unchanged) */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Ali Hashemi Rafsanjani</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="about">
+            <h2>About Me</h2>
+            
+            <div class="profile-photo-container">
+                <img src="1732258203977.jpg" alt="Profile picture of Ali Hashemi Rafsanjani">
+                <figcaption><i>Ali Hashemi Rafsanjani</i></figcaption>
+            </div>
+            
+            <div id="about-text">
+                <p>
+                    Hello, I'm Ali Hashemi Rafsanjani a passionate B.Sc. CSE student at AMERICAN INTERNATIONAL UNIVERSITY BANGLADESH (AIUB). 
+                    Born on 14/07/2003, I am preparing for an internship. 
+                    My goal is to leverage my skills in web technologies and problem-solving to contribute to innovative projects. I built this personal webpage for the Web Technologies course to introduce myself to potential employers.
+                </p>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Educational Qualifications</h2>
+            <table>
+                <caption>Academic Record</caption>
+                <thead>
+                    <tr>
+                        <th>Degree/Certificate</th>
+                        <th>Institution</th>
+                        <th>Year</th>
+                        <th>Achievement/Major</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>B.Sc. in Computer Science (CSE)</td>
+                        <td>American International University Bangladesh (AIUB)</td>
+                        <td>In Progress</td>
+                        <td>Major in Computer Science and Engineering (CSE).</td>
+                    </tr>
+                    <tr>
+                        <td>Higher Secondary Certificate (HSC)</td>
+                        <td>Dhaka City College</td>
+                        <td>[2020]</td>
+                        <td>Golden A+ (Science Group)</td>
+                    </tr>
+                    <tr>
+                        <td>Secondary School Certificate (SSC)</td>
+                        <td>Kurmitola High School & College</td>
+                        <td>[2018]</td>
+                        <td>Golden A+ (Science Group)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Send a Message</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    
+                    <button type="submit">Send Message</button>
+                </fieldset>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ali Hashemi Rafsanjani. All rights reserved.</p>
+        <p>Built for the Web Technologies course, FST, AIUB.</p>
+    </footer>
+
+</body>
+</html>
