@@ -1,0 +1,54 @@
+/* General Reset and Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f5;
+}
+
+/* 6. Set a background color for the entire <nav> bar. */
+/* 7. Use block-level styling so the nav bar spans the full-page width */
+nav {
+    background-color: #1a4f89; /* Deep Blue background */
+    width: 100%; /* Spans full width */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center the links within the nav bar */
+}
+
+/* Styling for the list items (li) */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    /* 2. Display links horizontally using display: inline-block. */
+    display: inline-block;
+    /* 3. Add margin for spacing between links. */
+    margin: 0 5px; 
+}
+
+/* Styling for the links (a) */
+nav ul li a {
+    /* 4. Apply text-decoration: none to remove underlines. */
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.1em;
+    
+    /* To make padding and hover area larger: */
+    display: block; 
+    
+    /* 3. Add padding for spacing inside the link area. */
+    padding: 15px 25px; 
+    
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* 5. Add :hover effects to change text or background color. */
+nav ul li a:hover {
+    background-color: #548396; /* Change background to AIUB Red */
+    color: #fcd34d; /* Change text color to Gold/Yellow */
+}
