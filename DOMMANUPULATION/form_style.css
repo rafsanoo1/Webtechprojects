@@ -1,0 +1,157 @@
+/* General Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa; /* Very light background */
+    padding: 30px;
+}
+
+/* Main Content Wrapper (Container) */
+.container {
+    max-width: 800px;
+    margin: 40px auto; /* Center the content */
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    /* Professional shadow for depth */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+}
+
+h1 {
+    font-size: 38px;
+    color: #343a40; /* Darker heading color */
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 10px;
+    margin-bottom: 30px; 
+}
+
+h2 {
+    font-size: 28px;
+    color: #495057;
+    margin-top: 30px; 
+    margin-bottom: 15px;
+}
+
+/* Form Styling */
+#student-form {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+    font-size: 18px; 
+}
+
+#student-form label {
+    font-weight: 600;
+    color: #495057;
+}
+
+#student-name {
+    padding: 12px; 
+    border: 1px solid #ced4da; /* Subtle border */
+    border-radius: 8px; /* Rounded input */
+    flex-grow: 1; /* Allows input to take up available space */
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#student-name:focus {
+    border-color: #007bff; /* Highlight on focus */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+/* General Button Styling (Add, Highlight, Edit, Delete) */
+button {
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 8px; /* Consistent rounded corners */
+    cursor: pointer;
+    font-size: 16px; 
+    font-weight: 500;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+/* Primary Button (Add Student, Highlight Students) */
+#student-form button[type="submit"],
+body > button {
+    background-color: #1a4f89; /* AIUB-inspired blue */
+    color: white;
+    box-shadow: 0 4px 6px rgba(26, 79, 137, 0.3);
+}
+
+#student-form button[type="submit"]:hover,
+body > button:hover {
+    background-color: #0d3864;
+    transform: translateY(-1px);
+}
+
+/* Student List Styling */
+#student-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.student-item {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+    padding: 15px; 
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 5px;
+    background-color: #fefefe;
+    border-radius: 6px;
+}
+
+.student-item:last-child {
+    border-bottom: none;
+}
+
+.student-item span {
+    flex-grow: 1; /* Push buttons to the right */
+    font-size: 20px; 
+    font-weight: 500;
+    color: #343a40;
+}
+
+/* Edit and Delete Button Styling */
+.btn-edit {
+    background-color: #ffc107; /* Yellow/Gold for Edit */
+    color: #343a40;
+    padding: 8px 15px; 
+    font-size: 14px; 
+}
+
+.btn-delete {
+    background-color: #dc3545; /* Red for Delete */
+    color: white;
+    padding: 8px 15px; 
+    font-size: 14px; 
+}
+
+.btn-edit:hover {
+    background-color: #e0a800;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+/* Highlight Effect Styling */
+.highlight {
+    background-color: #fff3cd; /* Soft yellow background for highlight */
+    border: 2px solid #ffc107; /* Subtle border on highlight */
+    padding: 15px 10px; 
+    margin: 10px 0; 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.4);
+}
+
+/* Style the dynamically added Highlight Students button separately */
+body > button {
+    margin-top: 20px;
+    display: block;
+    width: 250px;
+    margin-left: auto; /* Center with the container */
+    margin-right: auto;
+}
