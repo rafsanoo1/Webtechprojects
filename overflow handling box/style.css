@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.box {
+    width: 300px;
+    height: 200px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 2px solid #333;
+    background-color: #fff;
+}
+
+/* Overflow settings */
+
+/* 1. visible: Content overflows and is still visible outside the box */
+.visible {
+    overflow: visible;
+}
+
+/* 2. hidden: Content that overflows is clipped and hidden */
+.hidden {
+    overflow: hidden;
+}
+
+/* 3. scroll: Adds scrollbars regardless of whether content overflows */
+.scroll {
+    overflow: scroll;
+}
+
+/* 4. auto: Adds scrollbars only if content exceeds box size */
+.auto {
+    overflow: auto;
+}

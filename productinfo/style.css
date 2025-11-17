@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f8f8;
+    padding: 30px;
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.product-box {
+    display: inline-block;
+    width: 250px;
+    background: #ffffff;
+    border: 2px solid #dddddd;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* Hover Outline */
+.product-box:hover {
+    outline: 3px solid #008cff;
+    outline-offset: 5px;
+}
+
+.product-box img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-box h2 {
+    font-size: 20px;
+}
+
+.product-box p {
+    font-size: 14px;
+    color: #444;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #008cff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #006fd1;
+}

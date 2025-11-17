@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Library Management System</title>
+    <style>
+        /* Internal CSS */
+        h1 {
+            font-weight: bold;
+        }
+        label {
+            margin-right: 4px;
+        }
+        input {
+            margin-right: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 6px 10px;
+            text-align: left;
+        }
+        th {
+            font-weight: bold;
+            background-color: #f9f9f9;
+        }
+        .old-book {
+            background-color: lightgray;
+        }
+        .new-book {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Library Management System</h1>
+
+    <form id="bookForm" onsubmit="return false;">
+        <label for="title">Book Title:</label>
+        <input type="text" id="title" placeholder="Enter book title" />
+        <label for="year">Publication Year:</label>
+        <input type="text" id="year" placeholder="Enter publication year" />
+        <button id="addBook">Add Book</button>
+    </form>
+
+    <h2>Book List</h2>
+    <table id="bookTable">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="new-book">
+                <td>ABC</td>
+                <td>2022</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
