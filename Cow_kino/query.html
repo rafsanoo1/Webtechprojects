@@ -405,81 +405,65 @@
     <p>© 2025 BabyBird Cow Market — Trusted • Secure • Premium</p>
   </footer>
 <script>
-  // Buttons
-  const buyerBtn = document.getElementById('buyerBtn');
-  const sellerBtn = document.getElementById('sellerBtn');
-  const resetBtn = document.getElementById('resetBtn');
-  const newQueryBtn = document.getElementById('newQueryBtn');
+    // JavaScript to toggle visibility of forms based on the role selection
 
-  // Sections (cards)
-  const stepRole = document.getElementById('stepRole');
-  const buyerCard = document.getElementById('buyerForm');
-  const sellerCard = document.getElementById('sellerForm');
-  const stepThanks = document.getElementById('stepThanks');
+    // Select role buttons
+    const buyerBtn = document.getElementById('buyerBtn');
+    const sellerBtn = document.getElementById('sellerBtn');
 
-  // Actual <form> elements inside the cards
-  const buyerFormEl = document.querySelector('#buyerForm form');
-  const sellerFormEl = document.querySelector('#sellerForm form');
+    // Select form containers
+    const buyerForm = document.getElementById('buyerForm');
+    const sellerForm = document.getElementById('sellerForm');
+    const stepRole = document.getElementById('stepRole');
 
-  function show(el) { el.classList.remove('hidden'); }
-  function hide(el) { el.classList.add('hidden'); }
+    // Handle Buyer button click
+    buyerBtn.addEventListener('click', function() {
+      stepRole.classList.add('hidden');
+      buyerForm.classList.remove('hidden');
+    });
 
-  function clearStatusFromUrl() {
-    // Removes ?status=success without reloading
-    const url = new URL(window.location.href);
-    url.searchParams.delete('status');
-    window.history.replaceState({}, '', url.pathname + url.search);
-  }
+    // Handle Seller button click
+    sellerBtn.addEventListener('click', function() {
+      stepRole.classList.add('hidden');
+      sellerForm.classList.remove('hidden');
+    });
+    // Handle "Send Another Query" button click
+     const newQueryBtn = document.getElementById('newQueryBtn');
+      if (newQueryBtn) {
+    newQueryBtn.addEventListener('click', function() {
+        // Hide the Thank You message
+        document.getElementById('stepThanks').classList.add('hidden');
+        // Show the role selection page
+        document.getElementById('stepRole').classList.remove('hidden');
+        
+        // Reset the forms (Buyer/Seller) if needed
+        document.getElementById('buyerForm').reset(); // Reset buyer form
+        document.getElementById('sellerForm').reset(); // Reset seller form
+    });
+      }
 
-  function resetUI() {
-    // Hide everything except role
-    hide(stepThanks);
-    hide(buyerCard);
-    hide(sellerCard);
-    show(stepRole);
 
-    // Reset both forms (clears email, textarea, checkboxes)
-    if (buyerFormEl) buyerFormEl.reset();
-    if (sellerFormEl) sellerFormEl.reset();
+    // Handle Reset button click (if needed)
+      const resetBtn = document.getElementById('resetBtn');
+     resetBtn.addEventListener('click', function() {
+    // Hide the Thank You message
+    document.getElementById('stepThanks').classList.add('hidden');
+    // Show the role selection page
+    document.getElementById('stepRole').classList.remove('hidden');
+    
+    // Reset the forms (Buyer/Seller)
+    document.getElementById('buyerForm').reset(); // Reset buyer form
+    document.getElementById('sellerForm').reset(); // Reset seller form
+});
 
-    // IMPORTANT: remove status=success so it doesn't show thank you again
-    clearStatusFromUrl();
-  }
-
-  // Role buttons
-  buyerBtn.addEventListener('click', () => {
-    hide(stepRole);
-    hide(stepThanks);
-    hide(sellerCard);
-    show(buyerCard);
-    clearStatusFromUrl(); // if user clicks around after success
-  });
-
-  sellerBtn.addEventListener('click', () => {
-    hide(stepRole);
-    hide(stepThanks);
-    hide(buyerCard);
-    show(sellerCard);
-    clearStatusFromUrl();
-  });
-
-  // Reset button (navbar)
-  resetBtn.addEventListener('click', resetUI);
-
-  // Send Another Query button (thank you card)
-  newQueryBtn.addEventListener('click', resetUI);
-
-  // On load: if redirected with status=success, show thank you, then remove the param
-  const urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.get('status') === 'success') {
-    hide(stepRole);
-    hide(buyerCard);
-    hide(sellerCard);
-    show(stepThanks);
-
-    // Super important: remove the param so reset/new query works perfectly
-    clearStatusFromUrl();
-  }
+    // Check if the URL contains the status parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('status') === 'success') {
+        // Hide the role selection
+        document.getElementById('stepRole').classList.add('hidden');
+        // Show the thank you message
+        document.getElementById('stepThanks').classList.remove('hidden');
+    }
 </script>
 </body>
 </html>
